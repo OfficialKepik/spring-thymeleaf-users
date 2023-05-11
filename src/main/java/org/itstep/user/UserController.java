@@ -103,8 +103,7 @@ public class UserController {
         userDb.setEnabled(user.isEnabled());
         userDb.setRoles(rolesNew);
 
-        userService.save
-                (userDb);
+        userService.save(userDb);
         model.addAttribute("user", userService.findAll());
         return "redirect:/users";
     }
